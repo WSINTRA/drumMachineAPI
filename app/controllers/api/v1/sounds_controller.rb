@@ -1,7 +1,7 @@
 class Api::V1::SoundsController < ApplicationController
- before_action :find_sound, only: [:update]
+	before_action :find_sound, only: [:update]
   def index
-  
+
     @sounds = Sound.all
     render json: @sounds
   end

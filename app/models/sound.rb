@@ -1,3 +1,3 @@
 class Sound < ApplicationRecord
-	has_many :skins
+	belongs_to :drumkit, required: false
 end

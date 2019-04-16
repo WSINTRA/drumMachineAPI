@@ -15,14 +15,8 @@ ActiveRecord::Schema.define(version: 2019_04_12_142248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "skins", force: :cascade do |t|
-    t.string "skin_url"
-    t.integer "sound_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sounds", force: :cascade do |t|
+  create_table "drumkits", force: :cascade do |t|
+    t.string "name"
     t.string "pad_1"
     t.string "pad_2"
     t.string "pad_3"
@@ -31,6 +25,13 @@ ActiveRecord::Schema.define(version: 2019_04_12_142248) do
     t.string "pad_6"
     t.string "pad_7"
     t.string "pad_8"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sounds", force: :cascade do |t|
+    t.string "sound_url"
+    t.integer "drumkit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

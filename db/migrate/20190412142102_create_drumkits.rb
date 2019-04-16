@@ -1,6 +1,7 @@
-class CreateSounds < ActiveRecord::Migration[5.2]
+class CreateDrumkits < ActiveRecord::Migration[5.2]
   def change
-    create_table :sounds do |t|
+    create_table :drumkits do |t|
+      t.string :name
       t.string :pad_1
       t.string :pad_2
       t.string :pad_3
