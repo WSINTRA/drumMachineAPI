@@ -1,3 +1,4 @@
 class Sound < ApplicationRecord
-	belongs_to :drumkit, required: false
+	has_many :kit_sounds
+	has_many :drumkits, through: :kit_sounds
 end

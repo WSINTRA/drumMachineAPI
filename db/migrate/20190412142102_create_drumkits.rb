@@ -1,16 +1,7 @@
 class CreateDrumkits < ActiveRecord::Migration[5.2]
   def change
     create_table :drumkits do |t|
-      t.string :name
-      t.string :pad_1
-      t.string :pad_2
-      t.string :pad_3
-      t.string :pad_4
-      t.string :pad_5
-      t.string :pad_6
-      t.string :pad_7
-      t.string :pad_8
-
+    t.string "name"
       t.timestamps
     end
   end

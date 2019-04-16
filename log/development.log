@@ -8075,3 +8075,1286 @@ Migrating to CreateSounds (20190412142248)
   ↳ bin/rails:9
   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mDrumkit Load (0.6ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (117.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (117.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (244.3ms)[0m  [1m[35mCREATE DATABASE "drumMachine_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (244.1ms)[0m  [1m[35mCREATE DATABASE "drumMachine_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1" integer, "pad_2" integer, "pad_3" integer, "pad_4" integer, "pad_5" integer, "pad_6" integer, "pad_7" integer, "pad_8" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "drumkit_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 15:40:10.796500"], ["updated_at", "2019-04-16 15:40:10.796500"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1" integer, "pad_2" integer, "pad_3" integer, "pad_4" integer, "pad_5" integer, "pad_6" integer, "pad_7" integer, "pad_8" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "drumkit_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 15:40:10.869171"], ["updated_at", "2019-04-16 15:40:10.869171"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-04-16 15:40:10.873386"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Create (1.1ms)[0m  [1m[32mINSERT INTO "drumkits" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-04-16 15:40:28.290981"], ["updated_at", "2019-04-16 15:40:28.290981"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "sounds"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "drumkits"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1" integer, "pad_2" integer, "pad_3" integer, "pad_4" integer, "pad_5" integer, "pad_6" integer, "pad_7" integer, "pad_8" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142102_create_drumkits.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "drumkit_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142248_create_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "sounds"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "drumkits"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1_sound_id" integer, "pad_2_sound_id" integer, "pad_3_sound_id" integer, "pad_4_sound_id" integer, "pad_5_sound_id" integer, "pad_6_sound_id" integer, "pad_7_sound_id" integer, "pad_8_sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142102_create_drumkits.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142248_create_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSound Create (1.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 15:52:45.540728"], ["updated_at", "2019-04-16 15:52:45.540728"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Create (1.4ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "pad_1_sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DrumKit1"], ["pad_1_sound_id", 1], ["created_at", "2019-04-16 15:54:45.582108"], ["updated_at", "2019-04-16 15:54:45.582108"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDrumkit Load (1.1ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.3ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.5ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.5ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (0.8ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.6ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.4ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (237.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (231.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (255.0ms)[0m  [1m[35mCREATE DATABASE "drumMachine_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (251.3ms)[0m  [1m[35mCREATE DATABASE "drumMachine_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1_sound_id" integer, "pad_2_sound_id" integer, "pad_3_sound_id" integer, "pad_4_sound_id" integer, "pad_5_sound_id" integer, "pad_6_sound_id" integer, "pad_7_sound_id" integer, "pad_8_sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 16:11:54.718289"], ["updated_at", "2019-04-16 16:11:54.718289"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1_sound_id" integer, "pad_2_sound_id" integer, "pad_3_sound_id" integer, "pad_4_sound_id" integer, "pad_5_sound_id" integer, "pad_6_sound_id" integer, "pad_7_sound_id" integer, "pad_8_sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 16:11:54.789753"], ["updated_at", "2019-04-16 16:11:54.789753"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-04-16 16:11:54.794178"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateKitSounds (20190416160931)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "kit_sounds" ("id" bigserial primary key, "drumkit_id" integer, "sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190416160931_create_kit_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190416160931"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (1.0ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 16:16:22.908648"], ["updated_at", "2019-04-16 16:16:22.908648"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (1.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 16:16:45.246735"], ["updated_at", "2019-04-16 16:16:45.246735"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3"], ["created_at", "2019-04-16 16:16:45.252096"], ["updated_at", "2019-04-16 16:16:45.252096"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"], ["created_at", "2019-04-16 16:16:45.254394"], ["updated_at", "2019-04-16 16:16:45.254394"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3"], ["created_at", "2019-04-16 16:16:45.256362"], ["updated_at", "2019-04-16 16:16:45.256362"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3"], ["created_at", "2019-04-16 16:16:45.258284"], ["updated_at", "2019-04-16 16:16:45.258284"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3"], ["created_at", "2019-04-16 16:16:45.260282"], ["updated_at", "2019-04-16 16:16:45.260282"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3"], ["created_at", "2019-04-16 16:16:45.262256"], ["updated_at", "2019-04-16 16:16:45.262256"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3"], ["created_at", "2019-04-16 16:16:45.264215"], ["updated_at", "2019-04-16 16:16:45.264215"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Create (0.8ms)[0m  [1m[32mINSERT INTO "drumkits" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-04-16 16:21:45.097802"], ["updated_at", "2019-04-16 16:21:45.097802"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.9ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 2], ["created_at", "2019-04-16 16:21:49.335439"], ["updated_at", "2019-04-16 16:21:49.335439"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 1], ["created_at", "2019-04-16 16:21:56.386796"], ["updated_at", "2019-04-16 16:21:56.386796"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.8ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 3], ["created_at", "2019-04-16 16:21:59.830270"], ["updated_at", "2019-04-16 16:21:59.830270"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.7ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 4], ["created_at", "2019-04-16 16:22:05.717833"], ["updated_at", "2019-04-16 16:22:05.717833"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 5], ["created_at", "2019-04-16 16:22:07.964453"], ["updated_at", "2019-04-16 16:22:07.964453"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 6], ["created_at", "2019-04-16 16:22:10.732520"], ["updated_at", "2019-04-16 16:22:10.732520"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.7ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 7], ["created_at", "2019-04-16 16:22:13.557650"], ["updated_at", "2019-04-16 16:22:13.557650"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 8], ["created_at", "2019-04-16 16:22:16.868378"], ["updated_at", "2019-04-16 16:22:16.868378"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 8], ["created_at", "2019-04-16 16:23:02.835832"], ["updated_at", "2019-04-16 16:23:02.835832"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mKitSound Load (0.5ms)[0m  [1m[34mSELECT  "kit_sounds".* FROM "kit_sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (0.8ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.7ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.8ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrumkit Load (1.5ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (2.1ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1 LIMIT $2[0m  [["drumkit_id", 1], ["LIMIT", 11]]
+  [1m[36mDrumkit Load (1.9ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1 LIMIT $2[0m  [["drumkit_id", 1], ["LIMIT", 11]]
+  [1m[36mDrumkit Load (2.0ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateKitSounds (20190416160931)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "kit_sounds"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190416160931"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (117.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (117.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "drumMachine_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (238.8ms)[0m  [1m[35mCREATE DATABASE "drumMachine_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (243.2ms)[0m  [1m[35mCREATE DATABASE "drumMachine_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1_sound_id" integer, "pad_2_sound_id" integer, "pad_3_sound_id" integer, "pad_4_sound_id" integer, "pad_5_sound_id" integer, "pad_6_sound_id" integer, "pad_7_sound_id" integer, "pad_8_sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 16:26:07.015513"], ["updated_at", "2019-04-16 16:26:07.015513"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "drumkits" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "pad_1_sound_id" integer, "pad_2_sound_id" integer, "pad_3_sound_id" integer, "pad_4_sound_id" integer, "pad_5_sound_id" integer, "pad_6_sound_id" integer, "pad_7_sound_id" integer, "pad_8_sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190412142248)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190412142102);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 16:26:07.081573"], ["updated_at", "2019-04-16 16:26:07.081573"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-04-16 16:26:07.085735"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateKitSounds (20190416160931)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "kit_sounds" ("id" bigserial primary key, "drumkit_id" integer, "sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190416160931_create_kit_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190416160931"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (1.0ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 16:26:19.556451"], ["updated_at", "2019-04-16 16:26:19.556451"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3"], ["created_at", "2019-04-16 16:26:19.562822"], ["updated_at", "2019-04-16 16:26:19.562822"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"], ["created_at", "2019-04-16 16:26:19.564923"], ["updated_at", "2019-04-16 16:26:19.564923"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3"], ["created_at", "2019-04-16 16:26:19.566815"], ["updated_at", "2019-04-16 16:26:19.566815"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3"], ["created_at", "2019-04-16 16:26:19.568876"], ["updated_at", "2019-04-16 16:26:19.568876"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3"], ["created_at", "2019-04-16 16:26:19.570715"], ["updated_at", "2019-04-16 16:26:19.570715"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3"], ["created_at", "2019-04-16 16:26:19.572573"], ["updated_at", "2019-04-16 16:26:19.572573"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3"], ["created_at", "2019-04-16 16:26:19.575491"], ["updated_at", "2019-04-16 16:26:19.575491"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mKitSound Load (0.6ms)[0m  [1m[34mSELECT  "kit_sounds".* FROM "kit_sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.9ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Create (1.4ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kit 1"], ["created_at", "2019-04-16 16:27:16.323449"], ["updated_at", "2019-04-16 16:27:16.323449"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateKitSounds (20190416160931)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "kit_sounds"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190416160931"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "sounds"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "drumkits"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDrumkits (20190412142102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "drumkits" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142102_create_drumkits.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142102"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSounds (20190412142248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" bigserial primary key, "sound_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190412142248_create_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190412142248"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateKitSounds (20190416160931)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "kit_sounds" ("id" bigserial primary key, "drumkit_id" integer, "sound_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190416160931_create_kit_sounds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190416160931"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(615954146104180905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSound Create (0.9ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 16:28:10.226210"], ["updated_at", "2019-04-16 16:28:10.226210"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3"], ["created_at", "2019-04-16 16:28:10.229580"], ["updated_at", "2019-04-16 16:28:10.229580"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"], ["created_at", "2019-04-16 16:28:10.231679"], ["updated_at", "2019-04-16 16:28:10.231679"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3"], ["created_at", "2019-04-16 16:28:10.233572"], ["updated_at", "2019-04-16 16:28:10.233572"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3"], ["created_at", "2019-04-16 16:28:10.235586"], ["updated_at", "2019-04-16 16:28:10.235586"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3"], ["created_at", "2019-04-16 16:28:10.237404"], ["updated_at", "2019-04-16 16:28:10.237404"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3"], ["created_at", "2019-04-16 16:28:10.239573"], ["updated_at", "2019-04-16 16:28:10.239573"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3"], ["created_at", "2019-04-16 16:28:10.241950"], ["updated_at", "2019-04-16 16:28:10.241950"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Create (1.6ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kit 1"], ["created_at", "2019-04-16 16:28:21.339634"], ["updated_at", "2019-04-16 16:28:21.339634"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mKitSound Create (1.1ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 1], ["created_at", "2019-04-16 16:28:28.553624"], ["updated_at", "2019-04-16 16:28:28.553624"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 2], ["created_at", "2019-04-16 16:28:32.153124"], ["updated_at", "2019-04-16 16:28:32.153124"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 3], ["created_at", "2019-04-16 16:28:34.640962"], ["updated_at", "2019-04-16 16:28:34.640962"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 4], ["created_at", "2019-04-16 16:28:37.707421"], ["updated_at", "2019-04-16 16:28:37.707421"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.7ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 5], ["created_at", "2019-04-16 16:28:40.136448"], ["updated_at", "2019-04-16 16:28:40.136448"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 6], ["created_at", "2019-04-16 16:28:43.587389"], ["updated_at", "2019-04-16 16:28:43.587389"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 7], ["created_at", "2019-04-16 16:28:46.370117"], ["updated_at", "2019-04-16 16:28:46.370117"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 1], ["sound_id", 8], ["created_at", "2019-04-16 16:28:48.541995"], ["updated_at", "2019-04-16 16:28:48.541995"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrumkit Load (1.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDrumkit Load (1.4ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (1.9ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1 LIMIT $2[0m  [["drumkit_id", 1], ["LIMIT", 11]]
+  [1m[36mDrumkit Load (1.7ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1 LIMIT $2[0m  [["drumkit_id", 1], ["LIMIT", 11]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mKitSound Load (0.6ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.9ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-16 16:35:27.551680"], ["updated_at", "2019-04-16 16:35:27.551680"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3"], ["created_at", "2019-04-16 16:35:27.554065"], ["updated_at", "2019-04-16 16:35:27.554065"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"], ["created_at", "2019-04-16 16:35:27.556242"], ["updated_at", "2019-04-16 16:35:27.556242"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3"], ["created_at", "2019-04-16 16:35:27.558254"], ["updated_at", "2019-04-16 16:35:27.558254"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3"], ["created_at", "2019-04-16 16:35:27.560118"], ["updated_at", "2019-04-16 16:35:27.560118"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3"], ["created_at", "2019-04-16 16:35:27.562267"], ["updated_at", "2019-04-16 16:35:27.562267"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3"], ["created_at", "2019-04-16 16:35:27.564151"], ["updated_at", "2019-04-16 16:35:27.564151"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3"], ["created_at", "2019-04-16 16:35:27.566011"], ["updated_at", "2019-04-16 16:35:27.566011"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrumkit Create (0.4ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kit 1"], ["created_at", "2019-04-16 16:35:27.568074"], ["updated_at", "2019-04-16 16:35:27.568074"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mKitSound Create (0.6ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 16], ["created_at", "2019-04-16 16:35:27.581278"], ["updated_at", "2019-04-16 16:35:27.581278"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 15], ["created_at", "2019-04-16 16:35:27.586323"], ["updated_at", "2019-04-16 16:35:27.586323"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 14], ["created_at", "2019-04-16 16:35:27.590138"], ["updated_at", "2019-04-16 16:35:27.590138"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 13], ["created_at", "2019-04-16 16:35:27.593899"], ["updated_at", "2019-04-16 16:35:27.593899"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 12], ["created_at", "2019-04-16 16:35:27.600480"], ["updated_at", "2019-04-16 16:35:27.600480"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 11], ["created_at", "2019-04-16 16:35:27.604349"], ["updated_at", "2019-04-16 16:35:27.604349"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 10], ["created_at", "2019-04-16 16:35:27.608234"], ["updated_at", "2019-04-16 16:35:27.608234"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 2], ["sound_id", 9], ["created_at", "2019-04-16 16:35:27.612302"], ["updated_at", "2019-04-16 16:35:27.612302"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mDrumkit Create (0.3ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kit 2"], ["created_at", "2019-04-16 16:35:27.614319"], ["updated_at", "2019-04-16 16:35:27.614319"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 9], ["created_at", "2019-04-16 16:35:27.617896"], ["updated_at", "2019-04-16 16:35:27.617896"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 10], ["created_at", "2019-04-16 16:35:27.621613"], ["updated_at", "2019-04-16 16:35:27.621613"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 11], ["created_at", "2019-04-16 16:35:27.625143"], ["updated_at", "2019-04-16 16:35:27.625143"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 12], ["created_at", "2019-04-16 16:35:27.629106"], ["updated_at", "2019-04-16 16:35:27.629106"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 13], ["created_at", "2019-04-16 16:35:27.641330"], ["updated_at", "2019-04-16 16:35:27.641330"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mKitSound Create (0.6ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 14], ["created_at", "2019-04-16 16:35:27.647985"], ["updated_at", "2019-04-16 16:35:27.647985"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mDrumkit Load (0.3ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 15], ["created_at", "2019-04-16 16:35:27.653782"], ["updated_at", "2019-04-16 16:35:27.653782"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 3], ["sound_id", 16], ["created_at", "2019-04-16 16:35:27.658233"], ["updated_at", "2019-04-16 16:35:27.658233"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDrumkit Load (0.9ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mDrumkit Load (0.7ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  [1m[36mSound Load (0.9ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1 LIMIT $2[0m  [["drumkit_id", 2], ["LIMIT", 11]]
