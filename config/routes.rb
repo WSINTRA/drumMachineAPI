@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 namespace :api do
     namespace :v1 do
     	resources :drumkits, only: [:index, :update]
-    	resources :sounds, only: [:index, :update]
+    	resources :sounds, only: [:index, :new, :create, :update]
     end
   end
 
