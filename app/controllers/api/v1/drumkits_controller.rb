@@ -5,6 +5,16 @@ class Api::V1::DrumkitsController < ApplicationController
     @drumkits = Drumkit.all
     render json: @drumkits
   end
+
+  def new
+    @drumkit = Drumkit.new
+  end 
+
+  def create
+    @drumkit = Drumkit.create(drumkit_params)
+    render json: @drumkit, status: :accepted
+  end 
+ 
  
   def update
     @drumkit.update(drumkit_params)
@@ -18,7 +28,7 @@ class Api::V1::DrumkitsController < ApplicationController
   private
  
   def drumkit_params
-    params.permit(:title, :content)
+    params.permit(:name)
   end
  
   def find_drumkit
