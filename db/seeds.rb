@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+	# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -38,41 +38,41 @@ pad_23 = Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_2dd80a2
 pad_24 = Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_847fad5e51b546d6bd221bd04055d6a6.mp3")
 
 
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_3fb2cec59012477384e33315527e6796.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c120db727cc54651a12b9e1df6435a69.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_33320d18e84a45f9af04d7b9f7141092.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b0f791f8a5ee438bb2becc2be4e0ed40.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_75657e1ea99e4a9388e70996c984b71f.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_cb40520765b34641a7717f7976b0f789.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_438f41bd968548b2a8b78b32aeac68d0.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_08171036ce264e34b94ea60b92e5ab26.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c90ceda200ee4df89dbbec662b8c951d.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_5a42c1c6e46d456a903d1356232617f4.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_f395360fab904d3bb83769abf57f6042.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_72475b0775ac4b5d914d959c8be6a981.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_4ff3c8f28f2b48cd879589b242d8cfa8.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_f1493a5b68724c4690b212f578a72a95.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_98dc83be70fe45048441004a9f7fce8b.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_1ae1b40c47e444cb8b5b2af7b599488d.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_e602a7f9e13f4b4db27a72f2886571f4.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_43c048e3491f40d98b19192a59d8f65c.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_60b11e7596ae4e538a6ffe34339ac8b3.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_dcc010781df94d80aae8acffb043234b.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_6525659856334c42914176a916e41d8b.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_d848cb2420d14edeb38aca2e5bf227b6.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c163e3eba4ad4fd198a170eb5c024728.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b260d5f085c4427c9770b646a963a756.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_3ce6cde5fb9c461382a359b9948d5beb.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_4ec5e2fd155e4caebce652645745dab9.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_297b8bf00c0b49d2adcb9d6328dc31d5.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_08108b2e9ea244b38785491a675baa73.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_048124484cab4603b52d4078b073c922.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_dbfa05395d1244f883fb924ffc52525e.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_39a5054c901b41759c30f47217b8e1ea.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_d1e136e04fff4ae58d25a80863770b86.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b942b9cdf4db4ad19b719f3c5ce5ea61.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_e2b398ee17b44d108aef390f85dc9011.mp3"
-Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_86045d028b724fe3aa8a6b4ca2ffcd58.mp3"
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_3fb2cec59012477384e33315527e6796.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c120db727cc54651a12b9e1df6435a69.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_33320d18e84a45f9af04d7b9f7141092.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b0f791f8a5ee438bb2becc2be4e0ed40.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_75657e1ea99e4a9388e70996c984b71f.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_cb40520765b34641a7717f7976b0f789.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_438f41bd968548b2a8b78b32aeac68d0.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_08171036ce264e34b94ea60b92e5ab26.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c90ceda200ee4df89dbbec662b8c951d.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_5a42c1c6e46d456a903d1356232617f4.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_f395360fab904d3bb83769abf57f6042.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_72475b0775ac4b5d914d959c8be6a981.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_4ff3c8f28f2b48cd879589b242d8cfa8.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_f1493a5b68724c4690b212f578a72a95.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_98dc83be70fe45048441004a9f7fce8b.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_1ae1b40c47e444cb8b5b2af7b599488d.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_e602a7f9e13f4b4db27a72f2886571f4.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_43c048e3491f40d98b19192a59d8f65c.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_60b11e7596ae4e538a6ffe34339ac8b3.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_dcc010781df94d80aae8acffb043234b.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_6525659856334c42914176a916e41d8b.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_d848cb2420d14edeb38aca2e5bf227b6.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_c163e3eba4ad4fd198a170eb5c024728.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b260d5f085c4427c9770b646a963a756.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_3ce6cde5fb9c461382a359b9948d5beb.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_4ec5e2fd155e4caebce652645745dab9.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_297b8bf00c0b49d2adcb9d6328dc31d5.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_08108b2e9ea244b38785491a675baa73.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_048124484cab4603b52d4078b073c922.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_dbfa05395d1244f883fb924ffc52525e.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_39a5054c901b41759c30f47217b8e1ea.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_d1e136e04fff4ae58d25a80863770b86.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_b942b9cdf4db4ad19b719f3c5ce5ea61.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_e2b398ee17b44d108aef390f85dc9011.mp3")
+Sound.create(sound_url:"https://static.wixstatic.com/mp3/6641d6_86045d028b724fe3aa8a6b4ca2ffcd58.mp3")
 
 
 
