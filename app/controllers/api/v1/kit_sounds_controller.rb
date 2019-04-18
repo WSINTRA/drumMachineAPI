@@ -6,7 +6,7 @@ class Api::V1::KitSoundsController < ApplicationController
   end 
 
   def create
-    @kitsound = KitSound.create(sound_params)
+    @kitsound = KitSound.create(kitsound_params)
     render json: @kitsound, status: :accepted
   end 
  
