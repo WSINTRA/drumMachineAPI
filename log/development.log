@@ -27626,3 +27626,1075 @@ Processing by Api::V1::DrumkitsController#index as */*
 Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/api/v1/drumkits" for ::1 at 2019-04-18 10:45:21 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Music_Studio/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::DrumkitsController#index as */*
+  [1m[36mDrumkit Load (0.8ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mKitSound Load (0.5ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mKitSound Load (0.4ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mKitSound Load (0.4ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mKitSound Load (0.3ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mKitSound Load (0.3ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers]   [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" INNER JOIN "kit_sounds" ON "sounds"."id" = "kit_sounds"."sound_id" WHERE "kit_sounds"."drumkit_id" = $1[0m  [["drumkit_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/drumkits_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.72ms)
+Completed 200 OK in 148ms (Views: 111.5ms | ActiveRecord: 30.7ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 82]]
+  ↳ db/seeds.rb:11
+  [1m[35m (87.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 83]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 84]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 85]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 86]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 87]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 88]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 89]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 90]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 91]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 92]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 93]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 94]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 95]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 96]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 97]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 98]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 99]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 100]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 101]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 102]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 103]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 104]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 105]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = $1[0m  [["id", 106]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDrumkit Load (0.6ms)[0m  [1m[34mSELECT "drumkits".* FROM "drumkits"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.9ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDrumkit Destroy (0.2ms)[0m  [1m[31mDELETE FROM "drumkits" WHERE "drumkits"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mKitSound Load (0.7ms)[0m  [1m[34mSELECT "kit_sounds".* FROM "kit_sounds"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 153]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 154]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 155]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 156]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 157]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 158]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 159]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 160]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 161]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 162]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 163]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 164]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 165]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 166]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 167]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 168]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 169]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 170]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 171]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 172]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 173]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 174]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 175]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 176]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 177]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 178]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 179]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 180]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 181]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 182]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 183]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 184]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 185]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 186]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 187]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 188]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 189]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 190]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.2ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 191]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mKitSound Destroy (0.8ms)[0m  [1m[31mDELETE FROM "kit_sounds" WHERE "kit_sounds"."id" = $1[0m  [["id", 192]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3"], ["created_at", "2019-04-18 14:49:03.356197"], ["updated_at", "2019-04-18 14:49:03.356197"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3"], ["created_at", "2019-04-18 14:49:03.359150"], ["updated_at", "2019-04-18 14:49:03.359150"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"], ["created_at", "2019-04-18 14:49:03.361322"], ["updated_at", "2019-04-18 14:49:03.361322"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3"], ["created_at", "2019-04-18 14:49:03.363314"], ["updated_at", "2019-04-18 14:49:03.363314"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3"], ["created_at", "2019-04-18 14:49:03.365216"], ["updated_at", "2019-04-18 14:49:03.365216"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3"], ["created_at", "2019-04-18 14:49:03.367236"], ["updated_at", "2019-04-18 14:49:03.367236"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3"], ["created_at", "2019-04-18 14:49:03.369776"], ["updated_at", "2019-04-18 14:49:03.369776"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3"], ["created_at", "2019-04-18 14:49:03.373281"], ["updated_at", "2019-04-18 14:49:03.373281"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_15b8f278cddd4b97903b7ff309a5a2fb.mp3"], ["created_at", "2019-04-18 14:49:03.375246"], ["updated_at", "2019-04-18 14:49:03.375246"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_4996d0c805434ae5b2eba1c309dc390d.mp3"], ["created_at", "2019-04-18 14:49:03.377431"], ["updated_at", "2019-04-18 14:49:03.377431"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_761b08e05f05484aa5ccf72945c441c5.mp3"], ["created_at", "2019-04-18 14:49:03.379320"], ["updated_at", "2019-04-18 14:49:03.379320"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_ede9943c723d44d79f8bc830ce54434b.mp3"], ["created_at", "2019-04-18 14:49:03.381292"], ["updated_at", "2019-04-18 14:49:03.381292"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_bebba5aadb8c42f3bfde02545797f398.mp3"], ["created_at", "2019-04-18 14:49:03.383289"], ["updated_at", "2019-04-18 14:49:03.383289"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_7f8f447df9a846fbb61078db6f99370d.mp3"], ["created_at", "2019-04-18 14:49:03.386619"], ["updated_at", "2019-04-18 14:49:03.386619"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_0926b0aa981d4e0098c644008ea852d5.mp3"], ["created_at", "2019-04-18 14:49:03.389678"], ["updated_at", "2019-04-18 14:49:03.389678"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_e1e6bdf6acec4891afd96c21b6734d8f.mp3"], ["created_at", "2019-04-18 14:49:03.391780"], ["updated_at", "2019-04-18 14:49:03.391780"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_599408fc31554f348de9a19e1654973d.mp3"], ["created_at", "2019-04-18 14:49:03.393911"], ["updated_at", "2019-04-18 14:49:03.393911"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mSound Create (1.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_0b9956c299ae4378a068aa2b61ef71ef.mp3"], ["created_at", "2019-04-18 14:49:03.395868"], ["updated_at", "2019-04-18 14:49:03.395868"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_41e62bfce7294c25b2cdd49184050f16.mp3"], ["created_at", "2019-04-18 14:49:03.399177"], ["updated_at", "2019-04-18 14:49:03.399177"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_f3dd809e871546dbb7094684fc49305d.mp3"], ["created_at", "2019-04-18 14:49:03.401121"], ["updated_at", "2019-04-18 14:49:03.401121"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_b77e9e198a5c48a98d60c7ed1503b795.mp3"], ["created_at", "2019-04-18 14:49:03.403232"], ["updated_at", "2019-04-18 14:49:03.403232"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_77f5911c670f45268ed11369dcc102a6.mp3"], ["created_at", "2019-04-18 14:49:03.405138"], ["updated_at", "2019-04-18 14:49:03.405138"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_2dd80a276c08486a81edeb6a927a4a8d.mp3"], ["created_at", "2019-04-18 14:49:03.408393"], ["updated_at", "2019-04-18 14:49:03.408393"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_847fad5e51b546d6bd221bd04055d6a6.mp3"], ["created_at", "2019-04-18 14:49:03.411364"], ["updated_at", "2019-04-18 14:49:03.411364"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_3fb2cec59012477384e33315527e6796.mp3"], ["created_at", "2019-04-18 14:49:03.413247"], ["updated_at", "2019-04-18 14:49:03.413247"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_c120db727cc54651a12b9e1df6435a69.mp3"], ["created_at", "2019-04-18 14:49:03.415208"], ["updated_at", "2019-04-18 14:49:03.415208"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_33320d18e84a45f9af04d7b9f7141092.mp3"], ["created_at", "2019-04-18 14:49:03.417193"], ["updated_at", "2019-04-18 14:49:03.417193"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_b0f791f8a5ee438bb2becc2be4e0ed40.mp3"], ["created_at", "2019-04-18 14:49:03.419201"], ["updated_at", "2019-04-18 14:49:03.419201"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_75657e1ea99e4a9388e70996c984b71f.mp3"], ["created_at", "2019-04-18 14:49:03.421089"], ["updated_at", "2019-04-18 14:49:03.421089"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_cb40520765b34641a7717f7976b0f789.mp3"], ["created_at", "2019-04-18 14:49:03.423228"], ["updated_at", "2019-04-18 14:49:03.423228"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_438f41bd968548b2a8b78b32aeac68d0.mp3"], ["created_at", "2019-04-18 14:49:03.425156"], ["updated_at", "2019-04-18 14:49:03.425156"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_08171036ce264e34b94ea60b92e5ab26.mp3"], ["created_at", "2019-04-18 14:49:03.427084"], ["updated_at", "2019-04-18 14:49:03.427084"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_c90ceda200ee4df89dbbec662b8c951d.mp3"], ["created_at", "2019-04-18 14:49:03.429187"], ["updated_at", "2019-04-18 14:49:03.429187"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_5a42c1c6e46d456a903d1356232617f4.mp3"], ["created_at", "2019-04-18 14:49:03.431103"], ["updated_at", "2019-04-18 14:49:03.431103"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_f395360fab904d3bb83769abf57f6042.mp3"], ["created_at", "2019-04-18 14:49:03.433165"], ["updated_at", "2019-04-18 14:49:03.433165"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_72475b0775ac4b5d914d959c8be6a981.mp3"], ["created_at", "2019-04-18 14:49:03.435078"], ["updated_at", "2019-04-18 14:49:03.435078"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_4ff3c8f28f2b48cd879589b242d8cfa8.mp3"], ["created_at", "2019-04-18 14:49:03.436970"], ["updated_at", "2019-04-18 14:49:03.436970"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_f1493a5b68724c4690b212f578a72a95.mp3"], ["created_at", "2019-04-18 14:49:03.439014"], ["updated_at", "2019-04-18 14:49:03.439014"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_98dc83be70fe45048441004a9f7fce8b.mp3"], ["created_at", "2019-04-18 14:49:03.441040"], ["updated_at", "2019-04-18 14:49:03.441040"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_1ae1b40c47e444cb8b5b2af7b599488d.mp3"], ["created_at", "2019-04-18 14:49:03.442999"], ["updated_at", "2019-04-18 14:49:03.442999"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_e602a7f9e13f4b4db27a72f2886571f4.mp3"], ["created_at", "2019-04-18 14:49:03.444831"], ["updated_at", "2019-04-18 14:49:03.444831"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_43c048e3491f40d98b19192a59d8f65c.mp3"], ["created_at", "2019-04-18 14:49:03.446729"], ["updated_at", "2019-04-18 14:49:03.446729"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_60b11e7596ae4e538a6ffe34339ac8b3.mp3"], ["created_at", "2019-04-18 14:49:03.448725"], ["updated_at", "2019-04-18 14:49:03.448725"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_dcc010781df94d80aae8acffb043234b.mp3"], ["created_at", "2019-04-18 14:49:03.450812"], ["updated_at", "2019-04-18 14:49:03.450812"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_6525659856334c42914176a916e41d8b.mp3"], ["created_at", "2019-04-18 14:49:03.452758"], ["updated_at", "2019-04-18 14:49:03.452758"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_d848cb2420d14edeb38aca2e5bf227b6.mp3"], ["created_at", "2019-04-18 14:49:03.454663"], ["updated_at", "2019-04-18 14:49:03.454663"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_c163e3eba4ad4fd198a170eb5c024728.mp3"], ["created_at", "2019-04-18 14:49:03.456564"], ["updated_at", "2019-04-18 14:49:03.456564"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_b260d5f085c4427c9770b646a963a756.mp3"], ["created_at", "2019-04-18 14:49:03.458686"], ["updated_at", "2019-04-18 14:49:03.458686"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_3ce6cde5fb9c461382a359b9948d5beb.mp3"], ["created_at", "2019-04-18 14:49:03.460576"], ["updated_at", "2019-04-18 14:49:03.460576"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_4ec5e2fd155e4caebce652645745dab9.mp3"], ["created_at", "2019-04-18 14:49:03.462664"], ["updated_at", "2019-04-18 14:49:03.462664"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_297b8bf00c0b49d2adcb9d6328dc31d5.mp3"], ["created_at", "2019-04-18 14:49:03.464646"], ["updated_at", "2019-04-18 14:49:03.464646"]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_08108b2e9ea244b38785491a675baa73.mp3"], ["created_at", "2019-04-18 14:49:03.466454"], ["updated_at", "2019-04-18 14:49:03.466454"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_048124484cab4603b52d4078b073c922.mp3"], ["created_at", "2019-04-18 14:49:03.468288"], ["updated_at", "2019-04-18 14:49:03.468288"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_dbfa05395d1244f883fb924ffc52525e.mp3"], ["created_at", "2019-04-18 14:49:03.470097"], ["updated_at", "2019-04-18 14:49:03.470097"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_39a5054c901b41759c30f47217b8e1ea.mp3"], ["created_at", "2019-04-18 14:49:03.471945"], ["updated_at", "2019-04-18 14:49:03.471945"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_d1e136e04fff4ae58d25a80863770b86.mp3"], ["created_at", "2019-04-18 14:49:03.473753"], ["updated_at", "2019-04-18 14:49:03.473753"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_b942b9cdf4db4ad19b719f3c5ce5ea61.mp3"], ["created_at", "2019-04-18 14:49:03.475615"], ["updated_at", "2019-04-18 14:49:03.475615"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_e2b398ee17b44d108aef390f85dc9011.mp3"], ["created_at", "2019-04-18 14:49:03.477438"], ["updated_at", "2019-04-18 14:49:03.477438"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sound_url", "https://static.wixstatic.com/mp3/6641d6_86045d028b724fe3aa8a6b4ca2ffcd58.mp3"], ["created_at", "2019-04-18 14:49:03.479288"], ["updated_at", "2019-04-18 14:49:03.479288"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:79
+  [1m[36mDrumkit Create (0.4ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Basic Kit"], ["created_at", "2019-04-18 14:49:03.481254"], ["updated_at", "2019-04-18 14:49:03.481254"]]
+  ↳ db/seeds.rb:79
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mDrumkit Load (0.8ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 114], ["created_at", "2019-04-18 14:49:03.493732"], ["updated_at", "2019-04-18 14:49:03.493732"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:81
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:81
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ db/seeds.rb:81
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 113], ["created_at", "2019-04-18 14:49:03.499609"], ["updated_at", "2019-04-18 14:49:03.499609"]]
+  ↳ db/seeds.rb:81
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:81
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 112], ["created_at", "2019-04-18 14:49:03.507062"], ["updated_at", "2019-04-18 14:49:03.507062"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mDrumkit Load (0.5ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 111], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mKitSound Create (0.5ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 111], ["created_at", "2019-04-18 14:49:03.514987"], ["updated_at", "2019-04-18 14:49:03.514987"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mDrumkit Load (0.4ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:84
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  ↳ db/seeds.rb:84
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 110], ["created_at", "2019-04-18 14:49:03.520666"], ["updated_at", "2019-04-18 14:49:03.520666"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:85
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  ↳ db/seeds.rb:85
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 109], ["created_at", "2019-04-18 14:49:03.525133"], ["updated_at", "2019-04-18 14:49:03.525133"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 108], ["created_at", "2019-04-18 14:49:03.529420"], ["updated_at", "2019-04-18 14:49:03.529420"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 36], ["sound_id", 107], ["created_at", "2019-04-18 14:49:03.533395"], ["updated_at", "2019-04-18 14:49:03.533395"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mDrumkit Create (0.3ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chill Beats"], ["created_at", "2019-04-18 14:49:03.535522"], ["updated_at", "2019-04-18 14:49:03.535522"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:90
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:90
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 115], ["LIMIT", 1]]
+  ↳ db/seeds.rb:90
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 115], ["created_at", "2019-04-18 14:49:03.539343"], ["updated_at", "2019-04-18 14:49:03.539343"]]
+  ↳ db/seeds.rb:90
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 116], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 116], ["created_at", "2019-04-18 14:49:03.543792"], ["updated_at", "2019-04-18 14:49:03.543792"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 117], ["created_at", "2019-04-18 14:49:03.547940"], ["updated_at", "2019-04-18 14:49:03.547940"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:93
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  ↳ db/seeds.rb:93
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 118], ["created_at", "2019-04-18 14:49:03.551969"], ["updated_at", "2019-04-18 14:49:03.551969"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 119], ["created_at", "2019-04-18 14:49:03.556461"], ["updated_at", "2019-04-18 14:49:03.556461"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 120], ["created_at", "2019-04-18 14:49:03.560362"], ["updated_at", "2019-04-18 14:49:03.560362"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 121], ["created_at", "2019-04-18 14:49:03.564720"], ["updated_at", "2019-04-18 14:49:03.564720"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:97
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ db/seeds.rb:97
+  [1m[36mKitSound Create (0.4ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 37], ["sound_id", 122], ["created_at", "2019-04-18 14:49:03.569267"], ["updated_at", "2019-04-18 14:49:03.569267"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mDrumkit Create (0.3ms)[0m  [1m[32mINSERT INTO "drumkits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mash Up"], ["created_at", "2019-04-18 14:49:03.571659"], ["updated_at", "2019-04-18 14:49:03.571659"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:100
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 123], ["LIMIT", 1]]
+  ↳ db/seeds.rb:100
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 123], ["created_at", "2019-04-18 14:49:03.576083"], ["updated_at", "2019-04-18 14:49:03.576083"]]
+  ↳ db/seeds.rb:100
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 124], ["created_at", "2019-04-18 14:49:03.580587"], ["updated_at", "2019-04-18 14:49:03.580587"]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:102
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:102
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:102
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 125], ["created_at", "2019-04-18 14:49:03.584931"], ["updated_at", "2019-04-18 14:49:03.584931"]]
+  ↳ db/seeds.rb:102
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:102
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 126], ["created_at", "2019-04-18 14:49:03.589214"], ["updated_at", "2019-04-18 14:49:03.589214"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 127], ["created_at", "2019-04-18 14:49:03.593518"], ["updated_at", "2019-04-18 14:49:03.593518"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mDrumkit Load (0.1ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 128], ["created_at", "2019-04-18 14:49:03.597527"], ["updated_at", "2019-04-18 14:49:03.597527"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mDrumkit Load (0.2ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 129], ["created_at", "2019-04-18 14:49:03.601951"], ["updated_at", "2019-04-18 14:49:03.601951"]]
+  ↳ db/seeds.rb:106
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mDrumkit Load (0.1ms)[0m  [1m[34mSELECT  "drumkits".* FROM "drumkits" WHERE "drumkits"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT  "sounds".* FROM "sounds" WHERE "sounds"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mKitSound Create (0.3ms)[0m  [1m[32mINSERT INTO "kit_sounds" ("drumkit_id", "sound_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drumkit_id", 38], ["sound_id", 130], ["created_at", "2019-04-18 14:49:03.605707"], ["updated_at", "2019-04-18 14:49:03.605707"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
